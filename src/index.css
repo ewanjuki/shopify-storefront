@@ -14,3 +14,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
+:root {
+  --primary-color: #12376e;
+  --secondary-color: #34598f;
+  --tertiary-color: #23487f;
+  --quartery-color: #45889f;
+}

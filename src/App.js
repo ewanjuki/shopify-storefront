@@ -1,8 +1,18 @@
+import { Route, Switch } from "react-router";
+
+import Connect from "./pages/Connect";
+import Collections from "./pages/Collections";
+
 function App() {
   return (
-    <div>
-      
-    </div>
+    <Switch>
+      <Route path="/" exact>
+        <Collections />
+      </Route>
+      <Route path="/connect">
+        <Connect />
+      </Route>
+    </Switch>
   );
 }
 
