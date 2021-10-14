@@ -19,7 +19,7 @@ function ConnectForm(props) {
   return (
     <form className={classes.form} onSubmit={submitFormHandler}>
       {props.status === "pending" && <LoadingSpinner />}
-      {props.error && <p>{props.error}</p>}
+      {props.error && <p className={classes.error}>{props.error}</p>}
       <div>
         <h2>Welcome</h2>
         <p>

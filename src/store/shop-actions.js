@@ -22,7 +22,7 @@ export function sendConnectData(domain, token) {
       const response = await apiCall(domain, token, query);
 
       if (!response.ok) {
-        throw new Error("Sending connect data failed.");
+        throw new Error("Unable to connect your store.");
       }
 
       const data = await response.json();
