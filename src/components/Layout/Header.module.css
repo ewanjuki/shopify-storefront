@@ -1,0 +1,42 @@
+.header {
+  padding: 2rem 10rem;
+  display: flex;
+  border-bottom: 1px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 4rem;
+  color: var(--tertiary-color);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav li {
+  margin: 0 2rem;
+}
+
+.nav button {
+  font: inherit;
+  font-size: 2rem;
+  color: var(--primary-color);
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 1rem;
+  transition: all .4s;
+  outline: none;
+  cursor: pointer;
+}
+
+.nav button:hover {
+  color: white;
+  background-color: var(--primary-color);
+}
