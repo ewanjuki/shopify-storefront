@@ -18,7 +18,10 @@ function App() {
       {shop && (
         <Layout>
           <Switch>
-            <Route path="/" exact>
+            <Route path='/' exact>
+              <Redirect to='/collections' />
+            </Route>
+            <Route path="/collections" exact>
               <Collections />
             </Route>
           </Switch>

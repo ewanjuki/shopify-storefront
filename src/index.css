@@ -22,3 +22,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.centered {
+  text-align: center;
+}
+
+.error {
+  color: #ff5349;
+  font-size: 3rem;
+}

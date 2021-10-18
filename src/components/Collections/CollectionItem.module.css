@@ -1,0 +1,23 @@
+.collection-item {  
+  margin: 3rem;  
+}
+
+.collection-item a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  width: 20rem;
+  height: 20rem;
+  color: var(--primary-color);
+}
+
+.collection-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collection-item p {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
