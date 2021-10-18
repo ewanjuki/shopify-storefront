@@ -1,25 +1,26 @@
 .form {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
   width: 50rem;
-  margin: 10rem auto;
+  margin: 5rem auto;
   height: 100vh;
   text-align: center;
   color: var(--primary-color);
 }
 
-.form h2 {
+.form h1 {
   font-family: "Dancing Script", cursive;
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--tertiary-color);
 }
 
 .form p {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
+  color: var(--quartery-color);
 }
 
 .form button {
+  display: inline-block;
+  width: 50%;
   margin-top: 1rem;  
   font: inherit;
   font-size: 2rem;
@@ -29,6 +30,7 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
+  border-radius: 0.5rem;
 }
 
 .form button:hover {
@@ -43,17 +45,24 @@
 }
 
 .control label {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .control input {
-  padding: 0 1rem;
+  display: inline-block;
+  width: 80%;
+  margin: auto;
+  padding: 0.5rem 1rem;
   font: inherit;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   outline: none;
+}
+
+.form.error .control input {
+  border: 1px solid #ff5349;
 }
 
 p.error {

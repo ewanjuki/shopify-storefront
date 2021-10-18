@@ -21,9 +21,3 @@ body {
   --tertiary-color: #23487f;
   --quartery-color: #45889f;
 }
-
-#root {
-  display: grid;
-  grid-template-rows: min-content 100% min-content;
-  grid-template-columns: minmax(6rem, 1fr) 1fr minmax(6rem, 1fr);
-}

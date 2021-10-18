@@ -51,7 +51,7 @@ export function sendConnectData(domain, token) {
       dispatch(
         uiActions.setHttpUpdate({
           status: "error",
-          error: e.message,
+          error: "Unable to connect your store. Please try again.",
         })
       );
     }

@@ -16,12 +16,18 @@ function ConnectForm(props) {
     props.onConnect({ domain: enteredDomain, token: enteredToken });
   }
 
+  let formClasses = `${classes.form}`
+
+  if(props.error) {
+    formClasses = `${classes.form} ${classes.error}`
+  }
+
   return (
-    <form className={classes.form} onSubmit={submitFormHandler}>
+    <form className={formClasses} onSubmit={submitFormHandler}>
       {props.status === "pending" && <LoadingSpinner />}
       {props.error && <p className={classes.error}>{props.error}</p>}
       <div>
-        <h2>Welcome</h2>
+        <h1>Welcome</h1>
         <p>
           Please enter your Shopify store domain and Storefront API Access Token
           to connect your store
