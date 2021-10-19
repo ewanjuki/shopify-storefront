@@ -8,8 +8,3 @@
 .no-collections h1 {
   font-size: 3rem;
 }
-
-.no-collections a {
-  font-size: 2rem;
-  color: var(--secondary-color);
-}

@@ -1,6 +1,7 @@
 import classes from "./CollectionsList.module.css";
 
 import CollectionItem from "./CollectionItem";
+import BrowseAllProducts from "../UI/BrowseAllProducts";
 
 function CollectionsList(props) {
   const mappedCollections = props.collections.map((collection) => {
@@ -30,6 +31,7 @@ function CollectionsList(props) {
     <div className={classes["collections-list"]}>
       <h1>Browse Our Collections</h1>
       <ul>{mappedCollections}</ul>
+      <BrowseAllProducts />
     </div>
   );
 }
