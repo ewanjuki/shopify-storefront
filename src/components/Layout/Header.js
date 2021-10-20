@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 import classes from "./Header.module.css";
 import { shopActions } from "../../store/shop";
@@ -28,7 +28,7 @@ function Header() {
 
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>{formattedShopName}</div>
+      <Link to="/collections" className={classes.logo}>{formattedShopName}</Link>
 
       <ul className={classes.nav}>
         <li>

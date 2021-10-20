@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import Connect from "./pages/Connect";
 import Collections from "./pages/Collections";
 import Layout from "./components/Layout/Layout";
+import Products from './pages/Products';
 
 function App() {
   const shop = useSelector((state) => state.shop.shop);
@@ -23,6 +24,9 @@ function App() {
             </Route>
             <Route path="/collections" exact>
               <Collections />
+            </Route>
+            <Route path='/collections/:handle'>
+              <Products />
             </Route>
           </Switch>
         </Layout>

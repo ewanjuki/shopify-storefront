@@ -1,0 +1,20 @@
+.pagination {
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+.prev,
+.page,
+.next {
+  margin-right: 1rem;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+}
+
+.inactive {
+  color: #a9a9a9;
+  pointer-events: none;
+}
