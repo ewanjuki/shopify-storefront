@@ -223,6 +223,42 @@ export function fetchPreviousProductsByCollHandle(handle, cursor) {
   }`
 }
 
+export function fetchProduct(handle) {
+  return `{
+    product(handle: "${handle}") {
+      description      
+      images(first: 10) {
+        edges {
+          node {
+            transformedSrc(maxWidth:500 maxHeight: 500)
+          }
+        }
+      }
+      title
+      priceRange {
+        maxVariantPrice {
+          amount
+        }
+        minVariantPrice {
+          amount
+        }
+      }
+      variants(first: 15) {
+        edges {
+          node {
+            id
+            title
+            priceV2 {
+              amount
+            }
+          }
+        }
+      }
+      vendor
+    }
+  }`
+}
+
 function apiCall(domain, token, query) {
   return fetch(`https://${domain}/api/2021-10/graphql.json`, {
     method: "POST",

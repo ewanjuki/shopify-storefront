@@ -1,0 +1,25 @@
+.images {
+  display: flex;
+  flex-direction: column;
+  margin: 0 3rem;
+  width: 40rem;
+  height: 40rem;
+}
+
+.featured-image {
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.other-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.other-images img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  margin-right: 1rem;
+}

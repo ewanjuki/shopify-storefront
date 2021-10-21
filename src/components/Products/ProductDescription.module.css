@@ -1,0 +1,13 @@
+.description {
+  margin: 3rem 0;
+}
+
+.description h3 {
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  color: var(--secondary-color);
+}
+
+.description p {
+  font-size: 2rem;
+}

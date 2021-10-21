@@ -10,7 +10,8 @@ import {
   fetchNextProducts,
   fetchPreviousProducts,
   fetchNextProductsByCollHandle,
-  fetchPreviousProductsByCollHandle
+  fetchPreviousProductsByCollHandle,
+  fetchProduct,
 } from "../lib/api";
 
 async function startHttpRequest(dispatch) {
@@ -122,13 +123,13 @@ export function getProducts(
     }
 
     try {
-      const collectionsData = await sendRequest(domain, token, query);
+      const productsData = await sendRequest(domain, token, query);
 
       dispatch(
         uiActions.setHttpUpdate({
           status: "completed",
           error: null,
-          data: collectionsData.data.products,
+          data: productsData.data.products,
         })
       );
     } catch (e) {
@@ -143,43 +144,73 @@ export function getProducts(
   };
 }
 
-export function getProductsByCollectionHandle(domain,
+export function getProductsByCollectionHandle(
+  domain,
   token,
   handle,
   starting = true,
   whichPage = "next",
-  cursor = "") {
-    return async (dispatch) => {
-      startHttpRequest(dispatch);
-  
-      let query = fetchFirstProductsByCollHandle(handle);
-  
-      if (!starting && whichPage === "next") {
-        query = fetchNextProductsByCollHandle(handle, cursor);
-      }
-  
-      if (!starting && whichPage === "previous") {
-        query = fetchPreviousProductsByCollHandle(handle, cursor);
-      }
-  
-      try {
-        const collectionsData = await sendRequest(domain, token, query);
-  
-        dispatch(
-          uiActions.setHttpUpdate({
-            status: "completed",
-            error: null,
-            data: collectionsData.data.collection.products,
-          })
-        );
-      } catch (e) {
-        dispatch(
-          uiActions.setHttpUpdate({
-            status: "error",
-            error: "Unable to get products.",
-            data: null,
-          })
-        );
-      }
-    };
+  cursor = ""
+) {
+  return async (dispatch) => {
+    startHttpRequest(dispatch);
+
+    let query = fetchFirstProductsByCollHandle(handle);
+
+    if (!starting && whichPage === "next") {
+      query = fetchNextProductsByCollHandle(handle, cursor);
+    }
+
+    if (!starting && whichPage === "previous") {
+      query = fetchPreviousProductsByCollHandle(handle, cursor);
+    }
+
+    try {
+      const productsData = await sendRequest(domain, token, query);
+
+      dispatch(
+        uiActions.setHttpUpdate({
+          status: "completed",
+          error: null,
+          data: productsData.data.collection.products,
+        })
+      );
+    } catch (e) {
+      dispatch(
+        uiActions.setHttpUpdate({
+          status: "error",
+          error: "Unable to get products.",
+          data: null,
+        })
+      );
+    }
+  };
+}
+
+export function getProduct(domain, token, handle) {
+  return async (dispatch) => {
+    startHttpRequest(dispatch);
+
+    const query = fetchProduct(handle);
+    
+    try {
+      const productData = await sendRequest(domain, token, query);
+
+      dispatch(
+        uiActions.setHttpUpdate({
+          status: "completed",
+          error: null,
+          data: productData.data.product,
+        })
+      );
+    } catch (e) {
+      dispatch(
+        uiActions.setHttpUpdate({
+          status: "error",
+          error: "Unable to get products.",
+          data: null,
+        })
+      );
+    }
+  };
 }

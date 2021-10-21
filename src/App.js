@@ -6,6 +6,7 @@ import Connect from "./pages/Connect";
 import Collections from "./pages/Collections";
 import Layout from "./components/Layout/Layout";
 import Products from './pages/Products';
+import Product from "./pages/Product";
 
 function App() {
   const shop = useSelector((state) => state.shop.shop);
@@ -27,6 +28,9 @@ function App() {
             </Route>
             <Route path='/collections/:handle'>
               <Products />
+            </Route>
+            <Route path='/products/:handle'>
+              <Product />
             </Route>
           </Switch>
         </Layout>
