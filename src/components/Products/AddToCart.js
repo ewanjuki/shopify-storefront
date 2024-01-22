@@ -11,11 +11,11 @@ function AddToCart(props) {
     <form className={classes["add-to-cart"]}>
       <div>
         <label htmlFor="product-select">
-          Select your {props.variants.title.toLowerCase()}
+          Variants for {props.variants.title.toLowerCase()}
         </label>
         <select id="product-select">{variantOptions}</select>
       </div>
-      <button>Add To Cart</button>
+      {/* <button>Add To Cart</button> */}
     </form>
   );
 }

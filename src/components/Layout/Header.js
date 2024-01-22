@@ -34,9 +34,9 @@ function Header() {
         <li>
           <button onClick={disconnectHandler}>Disconnect</button>
         </li>
-        <li>
+        {/* <li>
           <button>Cart (0)</button>
-        </li>
+        </li> */}
       </ul>
     </header>
   );
