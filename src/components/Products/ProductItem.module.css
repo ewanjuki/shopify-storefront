@@ -4,9 +4,16 @@
 
 .product-item a {
   display: inline-block;
-  width: 20rem;
-  height: 20rem;
+  width: 30rem;
+  height: 30rem;
   text-decoration: none;
+}
+
+@media (min-width: 749px) {
+  .product-item a {
+    width: 20rem;
+    height: 20rem;
+  }
 }
 
 .product-item img {
@@ -16,11 +23,23 @@
 }
 
 .product-item p {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--primary-color);
 }
 
+@media (min-width: 749px) {
+  .product-item p {
+    font-size: 2rem;
+  }
+}
+
 .product-item .price {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: var(--secondary-color);
+}
+
+@media (min-width: 749px) {
+  .product-item .price {
+    font-size: 2.5rem;
+  }
 }

@@ -12,9 +12,15 @@
 }
 
 .other-images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: none;
+}
+
+@media (min-width: 749px) {
+  .other-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .other-images img {

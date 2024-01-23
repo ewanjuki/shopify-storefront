@@ -1,11 +1,19 @@
-.intro {
-  margin-bottom: 2rem;
+@media (min-width: 749px) {
+  .intro {
+    margin-bottom: 2rem;
+  }
 }
 
 .intro h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   letter-spacing: 0.3rem;
   font-weight: 300;
+}
+
+@media (min-width: 749px) {
+  .intro h1 {
+    font-size: 4rem;
+  }
 }
 
 .intro h5 {

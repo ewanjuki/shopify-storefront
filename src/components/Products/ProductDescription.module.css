@@ -1,11 +1,23 @@
 .description {
-  margin: 3rem 0;
+  margin: 2rem 0;
+}
+
+@media (min-width: 749px) {
+  .description {
+    margin: 3rem 0;
+  }
 }
 
 .description h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   letter-spacing: 0.2rem;
   color: var(--secondary-color);
+}
+
+@media (min-width: 749px) {
+  .description h3 {
+    font-size: 3rem;
+  }
 }
 
 .description p {

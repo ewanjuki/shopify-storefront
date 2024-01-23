@@ -6,9 +6,16 @@
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  width: 20rem;
-  height: 20rem;
+  width: 30rem;
+  height: 30rem;
   color: var(--primary-color);
+}
+
+@media (min-width: 749px) {
+  .collection-item a {
+    width: 20rem;
+    height: 20rem;
+  }
 }
 
 .collection-item img {
@@ -18,6 +25,6 @@
 }
 
 .collection-item p {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   margin-top: 1rem;
 }
