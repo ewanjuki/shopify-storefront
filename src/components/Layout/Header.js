@@ -3,16 +3,7 @@ import { useHistory, Link } from "react-router-dom";
 
 import classes from "./Header.module.css";
 import { shopActions } from "../../store/shop";
-
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-function formatShopName(name) {
-  const names = name.split("-");
-
-  return names.map((name) => capitalizeFirstLetter(name)).join(" ");
-}
+import { formatShopName } from "../../lib/utils";
 
 function Header() {
   const dispatch = useDispatch();
