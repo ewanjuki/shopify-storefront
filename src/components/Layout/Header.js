@@ -14,12 +14,13 @@ function Header() {
 
   function disconnectHandler() {
     dispatch(shopActions.disconnect());
-    history.push('/connect');
   }
 
   return (
     <header className={classes.header}>
-      <Link to="/collections" className={classes.logo}>{formattedShopName}</Link>
+      <Link to="/collections" className={classes.logo}>
+        {formattedShopName}
+      </Link>
 
       <ul className={classes.nav}>
         <li>

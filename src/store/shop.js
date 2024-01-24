@@ -1,19 +1,30 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const shop = JSON.parse(localStorage.getItem("shop"));
+
+const initialState = {
+  shop: shop ? shop : null,
+};
+
 const shopSlice = createSlice({
   name: "shop",
-  initialState: { shop: null },
+  initialState,
   reducers: {
     connect(state, action) {
-      state.shop = {
+      const shop = {
         name: action.payload.name,
         domain: action.payload.domain,
         token: action.payload.token,
       };
+
+      state.shop = shop;
+
+      localStorage.setItem("shop", JSON.stringify(shop));
     },
 
-    disconnect(state) {
+    disconnect(state) {      
       state.shop = null;
+      localStorage.removeItem("shop");      
     },
   },
 });
