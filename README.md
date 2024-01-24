@@ -1,6 +1,6 @@
 # Shopify Storefront App
 
-This app enables viewing collections, products and product details of a Shopify Store.
+This app enables viewing collections, products and product details of a Shopify Store. https://shopify-storefront-l43e.vercel.app/
 
 ## Usage:
 
@@ -26,4 +26,5 @@ You will also see any lint errors in the console.
 ## Inorder to connect to your store after running the app
 
 1. Enter your shopify domain e.g. wanjuki-store.myshopify.com
-2. Enter the generated Storefront API access token
+2. [Generate Storefront API access token](https://help.withkoji.com/en/articles/6619709-how-to-find-your-shopify-storefront-api-access-token)
+3. Enter the generated storefront access token.
