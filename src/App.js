@@ -12,7 +12,6 @@ import Product from "./pages/Product";
 function App() {
   const shop = useSelector((state) => state.shop.shop);
 
-  console.log(shop);
   return (
     <Fragment>
       {!shop && <Connect />}
